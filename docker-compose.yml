@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   my_website:
-    image: dubhar/adocwebsite:0.0.1
+    image: dubhar/asciidocsite:latest
     ports:
       - "80:80"
     environment:
