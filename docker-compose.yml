@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  my_website:
+    image: dubhar/adocwebsite:0.0.1
+    ports:
+      - "80:80"
+    environment:
+      - "REPO=git@github.com:Dubhar/my_website.git"
+    volumes:
+      - "./MyWebsite/id_rsa:/ssh_key:ro"
+    restart: unless-stopped

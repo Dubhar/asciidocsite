@@ -1,0 +1,10 @@
+= AsciiDocSite
+
+This is a minimal static site generator for AsciiDoc Markup.
+It fetches sources from a git repo (http/https/ssh), creates html files and serves them to clients.
+
+For an example setup see docker-compose.yml.
+Alternatively you can start the container interactively, here are some examples:
+
+* `docker run -e REPO=https://github.com/Dubhar/bme680_exporter.git -p 80:80 dubhar/asciidocsite:latest`
+* `docker run -e REPO=git@github.com/Dubhar/bme680_exporter.git -v /home/Dubhar/.ssh/id_rsa:/ssh_key -p 8080:80 dubhar/asciidocsite:latest`
