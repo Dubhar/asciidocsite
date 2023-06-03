@@ -8,3 +8,29 @@ Alternatively you can start the container interactively, here are some examples:
 
 * `docker run -e REPO=https://github.com/Dubhar/bme680_exporter.git -p 80:80 dubhar/asciidocsite:latest`
 * `docker run -e REPO=git@github.com/Dubhar/bme680_exporter.git -v /home/Dubhar/.ssh/id_rsa:/ssh_key -p 8080:80 dubhar/asciidocsite:latest`
+
+== Styles
+
+Different styles are available thanks to the awesome project at link:https://github.com/darshandsoni/asciidoctor-skins[asciidoctor-skins] to use them you just need to mention the style of your choice at the beginning of your AsciiDoc document. The style files are added to the root of your repo, so if your AsciiDoc document is located in a subdirectory, consider this when specifying the path. Here are some examples:
+
+_index.adoc_
+```
+:stylesheet: plain.css
+
+= Cookbook
+
+In this book I collect recipes [...]
+```
+
+_baking/pizza.adoc_
+```
+:stylesheet: ../notebook.css
+:toc: left
+:last-update-label!:
+
+= pizza
+
+for the dough [...]
+```
+
+
