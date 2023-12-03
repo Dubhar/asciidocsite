@@ -1,4 +1,4 @@
-FROM nginx:1.25.2-alpine3.18-slim
+FROM nginx:alpine-slim
 
 # Install needed software
 RUN apk add --no-cache openssh-client git asciidoctor rsync supervisor
